@@ -7,5 +7,5 @@
     <string name="save_button">Save</string>
     <string name="main_text">It\'s been #days day (s) #hours hour (s) #minutes minute (s) and #seconds second since #event</string>
     <string name="required_fields">You have to fill all fields</string>
-    <string name="wrong_time">You\'re not from future, select a hour before now</string>
+    <string name="wrong_time">Select a hour before now</string>
 </resources>

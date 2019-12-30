@@ -41,6 +41,7 @@ function saveEventData(errorFieldsMessage, currentHourMessage){
         return;
     }
 
+    //Check hours
     if(today == date){
         var currentHour ="{0}:{1}".format(checkTime(currentDate.getHours()),checkTime(currentDate.getMinutes()));
         var minutesFromCurrentHour = getMinutesFromTime(currentHour);
