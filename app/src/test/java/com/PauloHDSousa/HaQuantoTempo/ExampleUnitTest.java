@@ -1,4 +1,4 @@
-package com.example.psousa.compaulohdsousahaquantotempo;
+package com.PauloHDSousa.HaQuantoTempo;
 
 import org.junit.Test;
 

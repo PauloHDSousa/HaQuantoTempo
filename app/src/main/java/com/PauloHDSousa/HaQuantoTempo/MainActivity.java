@@ -1,4 +1,4 @@
-package com.example.psousa.compaulohdsousahaquantotempo;
+package com.PauloHDSousa.HaQuantoTempo;
 
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         String mainText  = getString(R.string.main_text);
         String requiredFields =  getString(R.string.required_fields);
+        String wrongTime =  getString(R.string.wrong_time);
 
         //Updating the texts based on country
         str = str.replace("#headerMessage", headerMessage);
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         str = str.replace("#save", saveButton);
         str = str.replace("#main_text", mainText);
         str = str.replace("#requiredFields", requiredFields);
+        str = str.replace("#wrongTime", wrongTime);
 
         return str;
     }

@@ -1,4 +1,4 @@
-package com.example.psousa.compaulohdsousahaquantotempo;
+package com.PauloHDSousa.HaQuantoTempo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
