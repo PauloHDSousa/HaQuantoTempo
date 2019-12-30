@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">How long</string>
+    <string name="header_message">Made for you to remember every second</string>
+    <string name="event_date">Event date</string>
+    <string name="event_hour">Event Hour</string>
+    <string name="event_name">Event Name</string>
+    <string name="save_button">Save</string>
+    <string name="main_text">It\'s been #days day (s) #hours hour (s) #minutes minute (s) and #seconds second since #event</string>
+    <string name="required_fields">You have to fill all fields</string>
+</resources>
