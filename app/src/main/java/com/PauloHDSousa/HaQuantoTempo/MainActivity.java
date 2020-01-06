@@ -1,14 +1,21 @@
 package com.PauloHDSousa.HaQuantoTempo;
 
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import java.io.IOException;
 import java.io.InputStream;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +24,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WebView webView = new WebView(this);
+        WebView webView = findViewById(R.id.wvMain);
+
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         WebSettings settings = webView.getSettings();
         settings.setDomStorageEnabled(true);
@@ -34,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             String htmlContent = GetHTMLByCountry();
 
             webView.loadDataWithBaseURL("file:///android_asset/", htmlContent, "text/html",  "UTF-8","");
-            setContentView(webView);
         }
         catch (IOException e) {
             e.printStackTrace();
